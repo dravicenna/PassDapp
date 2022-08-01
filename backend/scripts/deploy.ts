@@ -1,7 +1,10 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const Passdapp = await ethers.getContractFactory("Passdapp");
+  // get owner address
+  const [owner] = await ethers.getSigners();
+  console.log(`Owner address: ${owner.address}`);
+  const Passdapp = await ethers.getContractFactory("PassDapp");
   const passdapp = await Passdapp.deploy();
 
   await passdapp.deployed();
