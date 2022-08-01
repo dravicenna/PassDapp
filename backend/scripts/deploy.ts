@@ -6,7 +6,7 @@ async function main() {
 
   await passdapp.deployed();
 
-  console.log("Lock with 1 ETH deployed to:", passdapp.address);
+  console.log("PassDapp deployed to:", passdapp.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
